@@ -1,0 +1,9 @@
+Math Macros
+-----------
+
+Version     v0.1
+License     GPLv3
+Copyright   Advanced Systems (C) 2021
+Maintainer  github.com/hentai-chan
+Format      LaTeX2e (2020/10/01)
+Requires    amsmath, amsthm, amssymb, mathtools
