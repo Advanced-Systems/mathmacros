@@ -1,0 +1,73 @@
+% Math Macros
+%
+% Advanced Systems (C)
+% 
+%% This program is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+%%
+%% This program is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public License
+%% along with this program.  If not, see <https://www.gnu.org/licenses/>.
+\NeedsTeXFormat{LaTeX2e}[2020/10/01]
+\ProvidesPackage{mathmacros}[2021/06/20 v0.1 Math Macros from the Adcanced Systems group]
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+
+\ProcessOptions\relax
+
+% math operators (prefix with f to avoid an ODR violation)
+\DeclareMathOperator{\frank}{rank}
+\DeclareMathOperator{\fspan}{Span}
+\DeclareMathOperator{\fcol}{Col}
+\DeclareMathOperator{\frow}{Row}
+\DeclareMathOperator{\fnull}{Null}
+\DeclareMathOperator{\fadj}{adj}
+\DeclareMathOperator{\ftrace}{tr}
+\DeclareMathOperator{\fdiag}{diag}
+\DeclareMathOperator{\fhom}{Hom}
+\DeclareMathOperator{\ffloor}{floor}
+\DeclareMathOperator{\fceil}{ceil}
+\DeclareMathOperator{\fdiv}{div}
+\DeclareMathOperator{\fgrad}{grad}
+\DeclareMathOperator{\fcurl}{curl}
+\DeclareMathOperator{\fker}{Ker}
+\DeclareMathOperator{\fim}{Im}
+
+% math delimiters
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+% math symbols
+\newcommand*{\defines}{\coloneqq}
+\newcommand*{\bolddot}{\boldsymbol{\cdot}}
+\newcommand*{\setbuild}{\:\middle|\:}
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+\newcommand*{\proofright}{"$\Rightarrow$" }
+\newcommand*{\proofleft}{"$\Leftarrow$" }
+\newcommand*{\notimplies}{\mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
+\newcommand*{\tolim}[2]{\underset{#1\to#2}{\xrightarrow{\hspace*{1.1cm}}}}
+\newcommand*{\seqinfty}[1]{\tolim{#1}{\infty}}
+\newcommand*{\domain}[1]{\mathcal{D}(#1)}
+\newcommand*{\codomain}[1]{\mathcal{C}(#1)}
+\newcommand*{\diff}{\mathop{}\!\mathrm{d}}
+\newcommand*{\evalat}[3]{\left.#1\vphantom{\int}\right\rvert_{#2}^{#3}}
+\newcommand*{\ihat}{\hat{\imath}}
+\newcommand*{\jhat}{\hat{\jmath}}
+\newcommand*{\khat}{\hat{k}}
+\newcommand*{\inlinematrix}[1]{\left(\begin{smallmatrix}#1\end{smallmatrix}\right)}
+\renewcommand*{\Re}{\operatorname{\mathfrak{Re}}}
+\renewcommand*{\Im}{\operatorname{\mathfrak{Im}}}
+
+\endinput
+% EOF
